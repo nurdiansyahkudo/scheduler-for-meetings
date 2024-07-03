@@ -134,14 +134,14 @@ function MeetingForm({ setFormValue }) {
 				)}
 				<h2 className="font-bold">Select Theme Color</h2>
 				<div className="flex justify-evenly">
-					{ThemeOptions.map((color, index) => (
+					{ThemeOptions.map((theme, index) => (
 						<div
 							key={index}
 							className={`h-7 w-7 rounded-full ${
-								themeColor == color && 'border-4 border-black'
+								themeColor == theme.color && 'border-4 border-black'
 							}`}
-							style={{ backgroundColor: color }}
-							onClick={() => setThemeColor(color)}
+							style={{ backgroundColor: theme.color }}
+							onClick={() => setThemeColor(theme.color)}
 						></div>
 					))}
 				</div>
